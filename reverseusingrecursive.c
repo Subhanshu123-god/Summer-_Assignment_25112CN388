@@ -7,27 +7,21 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-int fact(int n){
-    int f=1;
-    if(n==0 ||n==1){
-        return 1;
-    }
-    else
-    {
-        return n*fact(n-1);
-        
-        
-    }
-    
-}
-
+int reverse(int,int);
 int main()
 {
     int n;
     printf("enter number");
     scanf("%d",&n);
-    int a=fact(n);
-    printf("%d",a);
-
+    printf("%d",reverse(n,0));
     return 0;
 }
+int reverse(int n,int remain){
+    if(n==0)return remain;
+    remain=remain*10+n%10;
+    return reverse(n/10,remain);
+}
+
+
+
+    

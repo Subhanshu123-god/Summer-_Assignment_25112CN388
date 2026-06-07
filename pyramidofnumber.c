@@ -7,27 +7,18 @@ Welcome to GDB Online.
 
 *******************************************************************************/
 #include <stdio.h>
-int fact(int n){
-    int f=1;
-    if(n==0 ||n==1){
-        return 1;
-    }
-    else
-    {
-        return n*fact(n-1);
-        
-        
-    }
-    
-}
 
 int main()
 {
     int n;
-    printf("enter number");
+    printf("enter no of lines");
     scanf("%d",&n);
-    int a=fact(n);
-    printf("%d",a);
+    for(int i=1;i<=n;i++){
+        printf("\n");
+        for(int j=1;j<=i;j++){
+            printf("%d",i);
+        }
+    }
 
     return 0;
 }
